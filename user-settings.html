@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>user-settings</title>
+    </head>
+    <body>
+
+        <header class="header settings-header">
+            <h2 class="settings-header-title">Settings</h2>
+        </header>
+
+        <main class="form-container">
+            <form onsubmit="onSubmitForm(event)">
+
+                <ul>
+                    <li>
+                        <label for="email">E-mail:</label>
+                        <input type="email" name="email" id="email" required>
+                    </li>
+                    <li>
+                        <label for="age">Age:</label>
+                        <input onchange="showAge(this.value)" type="range" value="22" min="18" max="120" name="age" id="age"> <span class="age-display">22</span>
+                    </li>
+                    <h4>Colors -</h4>
+                    <li>
+                        <label for="bg-color">Set Background Color:</label>
+                        <input type="color" name="bg-color" id="bg-color">
+                    </li>
+                    <li>
+                        <label for="text-color">Set Text Color:</label>
+                        <input type="color" name="text-color" id="text-color">
+                    </li>
+                    <li>
+                        <label for="birth-date">Birth Date:</label>
+                        <input type="date" name="birth-date" id="birth-date">
+                    </li>
+                    <li>
+                        <label for="birth-time">Birth Time:</label>
+                        <input type="time" name="birth-time" id="birth-time">
+                    </li>
+                    <button class="form-save-btn">Save</button>
+
+                </ul>
+
+            </form>
+        </main>
+       
+        <script src="js/service/storage-service.js"></script>
+        <script src="js/service/user-service.js"></script>
+        <script src="js/controller.js"></script>
+    </body>
+</html>
