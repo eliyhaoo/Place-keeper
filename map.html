@@ -6,18 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>map</title>
 </head>
-<body onload="getPosition()" >
+<body onload="onInitMap()" >
     <header class="header map-header">
 
         <main>
-            <div class="map-container" style="width:500px;height:300px;">
-
+            <div  class="map-container" style="width:500px;height:300px;">
             </div>
+            <button onclick="onMyLocation()"><img src="/imgs/location.png" alt="" style="width:20px"></button>
             <div class="saved-locations-container">
                 <header class="saved-location-header">
                     <h3>Saved Locations</h3>
-                    <ul>
-                        INNER TEXT HERE
+                    <ul class="saved-locations-list">
+                        <!-- <li>
+                            <span>title</span> <button class="close-btn">x</button>
+                        </li> -->
                     </ul>
                 </header>
             </div>
@@ -25,9 +27,13 @@
 
 
     </header>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSoxTSEWQdkQb1RPRlz8B4k7ilSPJxVmY>&callback=mapReady">
-    </script>
-    <script src="/js/controller.js"></script>
+  
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSoxTSEWQdkQb1RPRlz8B4k7ilSPJxVmY&callback=mapReady" async defer>
+    </script> 
+
+    <script src="/js/service/storage-service.js"></script>
+    <script src="/js/util-service.js"></script>
     <script src="/js/service/place-service.js"></script>
+    <script src="/js/controller.js"></script>
 </body>
 </html>
